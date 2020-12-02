@@ -15,7 +15,14 @@
       <%= comment.user.username %> says: <%= comment.content %>
     </li>
   <% end %>
+</ul>
 
+<ul>
+  <% @post.users.unique.each do |user| %>
+    <li>
+      <%= link_to user.username, user_path(user) %>
+    </li>
+  <% end %>
 </ul>
 
 <%= form_for @post.comments.build do |f| %>
