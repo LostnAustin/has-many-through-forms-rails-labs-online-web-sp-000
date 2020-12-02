@@ -9,7 +9,7 @@ class Post < ActiveRecord::Base
     category_attributes.each do |category_attribute|
       unless category_attribute[:name].blank?
         category = Category.find_or_create_by(category_attribute)
-          self.caegories << category
+          self.categories << category
       end
     end
   end
