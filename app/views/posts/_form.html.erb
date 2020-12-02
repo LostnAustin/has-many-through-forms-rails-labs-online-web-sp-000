@@ -11,6 +11,10 @@
   <%= f.collection_check_boxes :category_ids, Category.all, :id, :name %>
 
   <%= f.fields_for :categories, post.categories.build do |categories_fields| %>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 6fa3e099361ed09aac8f832880a6bc80844ecb8f
     <%= categories_fields.label :name, "Category" %>
     <%= categories_fields.text_field :name %>
   <% end %>
