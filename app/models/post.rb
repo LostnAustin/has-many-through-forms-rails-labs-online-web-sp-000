@@ -5,7 +5,7 @@ class Post < ActiveRecord::Base
   has_many :users, through: :comments
   accepts_nested_attributes_for :categories
 
-  def categories_attributes=(categories_attributes)
+  def categories_attributes=(category_attributes)
     category_attributes.each do |category_attribute|
       unless category_attribute[:name].blank?
         category = Category.find_or_create_by(category_attribute)
@@ -14,5 +14,5 @@ class Post < ActiveRecord::Base
     end
   end
 
-  
+
 end
