@@ -1,5 +1,11 @@
-
-  <%= @post.title %>
+<%= @post.title %>
+  <ul>
+    <% @post.categories.each do |category| %>
+      <li>
+      <%= category.name %>
+      </li>
+    <% end %>
+  </ul>
 
   <%= @post.content %>
 
